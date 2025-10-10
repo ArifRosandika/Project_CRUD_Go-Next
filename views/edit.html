@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <form action="/products/edit" method="POST">
+        <input type="hidden" name="id" value="{{ .ID }}">
+
+        <label>Product Name:</label><br>
+        <input type="text" name="name" value="{{ .Name }}"><br><br>
+
+        <label>Price:</label><br>
+        <input type="number" name="price" value="{{ .Price }}"><br><br>
+
+        <button type="submit">Save</button>
+        <button><a href="/products">Cancel</a></button>
+    </form>
+</body>
+</html>
